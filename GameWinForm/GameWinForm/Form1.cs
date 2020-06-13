@@ -16,5 +16,10 @@ namespace GameWinForm
         {
             InitializeComponent();
         }
+
+        private void gameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
