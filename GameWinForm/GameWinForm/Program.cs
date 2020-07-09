@@ -16,7 +16,7 @@ namespace GameWinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new GameForm()); //As Form1 closes, Application exit as well.
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace GameWinForm
 {
-    partial class Form1
+    partial class GameForm
     {
         /// <summary>
         /// Required designer variable.
@@ -51,6 +51,7 @@
             this.nextButton.TabIndex = 1;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
+            this.nextButton.Click += new System.EventHandler(this.gameTextBox_TextChanged);
             // 
             // prevButton
             // 
@@ -70,7 +71,7 @@
             this.labelCurrentGame.TabIndex = 3;
             this.labelCurrentGame.Text = "label1";
             // 
-            // Form1
+            // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,8 +80,8 @@
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.nextButton);
             this.Controls.Add(this.gameTextBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "GameForm";
+            this.Text = "Game Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -10,9 +10,15 @@ using System.Windows.Forms;
 
 namespace GameWinForm
 {
-    public partial class Form1 : Form
+    /**************************************************************\
+    | Partial class means part of the source code is from Form     |
+    |class and part is in another class. The GameForm inherites    |
+    |from Form class and extend the Form class (i.e.Functionalities| 
+    |are added).                                                   |
+    \**************************************************************/
+    public partial class GameForm : Form 
     {
-        public Form1()
+        public GameForm()
         {
             InitializeComponent();
         }
