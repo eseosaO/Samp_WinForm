@@ -32,6 +32,7 @@
             this.nextButton = new System.Windows.Forms.Button();
             this.prevButton = new System.Windows.Forms.Button();
             this.labelCurrentGame = new System.Windows.Forms.Label();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // gameTextBox
@@ -65,17 +66,29 @@
             // labelCurrentGame
             // 
             this.labelCurrentGame.AutoSize = true;
+            this.labelCurrentGame.Font = new System.Drawing.Font("Rockwell", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCurrentGame.Location = new System.Drawing.Point(77, 55);
             this.labelCurrentGame.Name = "labelCurrentGame";
-            this.labelCurrentGame.Size = new System.Drawing.Size(51, 20);
+            this.labelCurrentGame.Size = new System.Drawing.Size(173, 25);
             this.labelCurrentGame.TabIndex = 3;
-            this.labelCurrentGame.Text = "label1";
+            this.labelCurrentGame.Text = "Available Games";
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.Location = new System.Drawing.Point(685, 147);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(158, 46);
+            this.buttonClose.TabIndex = 4;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = true;
+            this.buttonClose.Click += new System.EventHandler(this.Close_Click);
             // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(956, 450);
+            this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.labelCurrentGame);
             this.Controls.Add(this.prevButton);
             this.Controls.Add(this.nextButton);
@@ -93,6 +106,7 @@
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button prevButton;
         private System.Windows.Forms.Label labelCurrentGame;
+        private System.Windows.Forms.Button buttonClose;
     }
 }
 

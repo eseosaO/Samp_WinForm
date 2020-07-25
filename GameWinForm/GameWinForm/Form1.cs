@@ -27,5 +27,14 @@ namespace GameWinForm
         {
 
         }
+
+        /* Eventhandler for button to close the Form*/       
+        private void Close_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure you want to exit?", "cancel",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

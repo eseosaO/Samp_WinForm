@@ -37,16 +37,32 @@ namespace GameWinForm
             this.condition = condition;
         }
 
+        /*Get methods for each of the class attributes*/
+        public string GetConsole
+        {
+            get { return console; }
+        }
+
+        public string GetDeveloper
+        {
+            get { return gameDev; }
+        }
+
+        public string GetTitle
+        {
+            get { return gameTitle; }
+        }
+
         public decimal OriginalPrice
         {
             get { return originalPrice; }
-            set { originalPrice = value; }
+                       
         }
 
         public DateTime ReleaseDate
         {
             get { return releaseDate; }
-            set { releaseDate = value; }
+            
         }
 
         public Condition GetCondition()
