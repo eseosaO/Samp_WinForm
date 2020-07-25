@@ -6,36 +6,36 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
-    //XboxGame is inheritted class from base class, Game.
-    public class XboxGame : Game
+    //PSGame is inheritted class from base class, Game.
+    public class PSGame : Game
     {
-        public XboxGame(string gameTitle, string gameDev, decimal originalPrice, DateTime releaseDate, Condition condition) : base(gameTitle, gameDev, originalPrice, releaseDate, condition)
+        public PSGame(string gameTitle, string gameDev, decimal originalPrice, DateTime releaseDate, Condition condition) : base(gameTitle, gameDev, originalPrice, releaseDate, condition)
         {
             //As this class inherits from a base class, 
             //the constructor will generate the instance based on the attributes of the Base class and an additional attribute considered for this class.
-            this.console = "Xbox console";
+            this.console = "Playstation";
         }
 
-        //This method is overridden in this inherited class (XboxGame)
+        //This method is overridden in this inherited class (PSGame)
         public override decimal CalculateApproximateValue()
         {
             decimal estimate = 0;
             //Modify Game's estimated value based on its condition
-            if(condition == Condition.poor)
+            if (condition == Condition.poor)
             {
-                estimate = originalPrice * 0.5m; //50% of original price
+                estimate = originalPrice * 0.4m; //40% of original price
             }
             else if (condition == Condition.fair)
             {
-                estimate = originalPrice * 0.7m; //70% of original price
+                estimate = originalPrice * 0.5m; //50% of original price
             }
             else if (condition == Condition.good)
             {
-                estimate = originalPrice * 0.8m;  //80% of original price
+                estimate = originalPrice * 0.7m; //70% of original price
             }
             else if(condition == Condition.mint)
             {
-                estimate = originalPrice * 0.9m;  //90% of original price
+                estimate = originalPrice * 0.8m;  //80% of original price
             }
 
             //considering the game's age
@@ -52,8 +52,6 @@ namespace GameWinForm.Classes
             estimate = Decimal.Round(estimate, 0); //round-up to nearest whole value of estimate price
 
             return estimate;
-
-
         }
 
         public override string Description()
