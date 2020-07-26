@@ -42,7 +42,7 @@
             this.gameTextBox.Name = "gameTextBox";
             this.gameTextBox.Size = new System.Drawing.Size(464, 189);
             this.gameTextBox.TabIndex = 0;
-            this.gameTextBox.TextChanged += new System.EventHandler(this.gameTextBox_TextChanged);
+            //this.gameTextBox.TextChanged += new System.EventHandler(this.gameTextBox_TextChanged);
             // 
             // nextButton
             // 
@@ -52,7 +52,7 @@
             this.nextButton.TabIndex = 1;
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
-            this.nextButton.Click += new System.EventHandler(this.gameTextBox_TextChanged);
+            //this.nextButton.Click += new System.EventHandler(this.gameTextBox_TextChanged);
             // 
             // prevButton
             // 
@@ -95,6 +95,7 @@
             this.Controls.Add(this.gameTextBox);
             this.Name = "GameForm";
             this.Text = "Game Form";
+            this.Load += new System.EventHandler(this.GameForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

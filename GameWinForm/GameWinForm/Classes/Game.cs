@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace GameWinForm
 {
-    //Game is an Abstract class that implements with IComparable interface which will enable sorting of objects(i.e. Game objects).
+    /*****************************************************************************\
+    |Game is an Abstract class that implements with IComparable interface which   | 
+    |will enable sorting of objects(i.e.Game objects).Using polymorphism, types   |
+    |of games, PS games and Xbox games inherit from the Game Abstract class       |
+    |This types of games implement a method (declared in the abstract) differently| 
+    |in their inherited class.                                                    |
+    \*****************************************************************************/
     public abstract class Game : IComparable
     {
         //Game conditions

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
-    //PSGame is inheritted class from base class, Game.
+    /*PSGame is inheritted class from base class, Game.*/
     public class PSGame : Game
     {
         public PSGame(string gameTitle, string gameDev, decimal originalPrice, DateTime releaseDate, Condition condition) : base(gameTitle, gameDev, originalPrice, releaseDate, condition)
