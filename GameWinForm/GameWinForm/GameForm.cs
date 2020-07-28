@@ -47,13 +47,16 @@ namespace GameWinForm
         // Method to display on the main form
         private void DisplayGame()
         {
-            labelCurrentGame.Text = string.Format("Viewing {0} of {1}", shop.CurrentlyViewedGame + 1, shop.NumberOfGame);
-            gameTextBox.Text = shop.DescribeCurrentGame();
+                labelShop.Text = shop.GetShopName;
+                labelCurrentGame.Text = string.Format("Viewing {0} of {1} in {2}", shop.CurrentlyViewedGame + 1, shop.NumberOfGame, shop.GetShopName);
+                gameTextBox.Text = shop.DescribeCurrentGame();
+            
+            
         }
 
         
 
-        /* Eventhandler for button to close the Form*/       
+        /* Event handler for button to close the Form*/       
         private void Close_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("Are you sure you want to exit?", "cancel",MessageBoxButtons.YesNo) == DialogResult.Yes)
@@ -61,7 +64,32 @@ namespace GameWinForm
                 this.Close();
             }
         }
-
         
+        /*Event handler for button to display next game item*/
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            shop.StepToNextGame();
+            DisplayGame();
+        }
+
+        /*Event handler for button to display previous game item*/
+        private void prevButton_Click(object sender, EventArgs e)
+        {
+            shop.StepToPreviousGame();
+            DisplayGame();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            Game game = null; //Declared game instance with no values.
+            AddForm addForm = new AddForm(game, shop); //loads the add form
+
+            if((addForm.ShowDialog()) == System.Windows.Forms.DialogResult.OK)
+            {
+                //shop.AddGame(game);
+                shop.CurrentlyViewedGame = shop.NumberOfGame - 1;
+                DisplayGame();
+            }
+        }
     }
 }

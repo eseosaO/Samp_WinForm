@@ -27,9 +27,15 @@ namespace GameWinForm.Classes
             get { return shopName; } 
         }
 
+        public List<Game> GetGameForSale
+        {
+            get { return gamesForSale; }
+        }
+
         public int CurrentlyViewedGame //this method returns the current index position of the game in the list 
         {
             get { return currentlyViewedGame; }
+            set { currentlyViewedGame = value; }
         }  
          
         public int NumberOfGame //This returns the number of available games in the list 
@@ -71,6 +77,14 @@ namespace GameWinForm.Classes
             {
                 currentlyViewedGame++;
             }
+            else if(gamesForSale.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("There is no Game to view. Please add games."); 
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("There is no more Game to view. Please click previous Button.");
+            }
         }
 
         public bool IsPreviousGame() //Method to check if there is a previous game in the list
@@ -90,6 +104,14 @@ namespace GameWinForm.Classes
             if (IsPreviousGame())
             {
                 currentlyViewedGame--;
+            }
+            else if(gamesForSale.Count == 0)
+            {
+                System.Windows.Forms.MessageBox.Show("There is no Game to view. Please add games.");
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("There is no previous Game to view.");
             }
         }
 

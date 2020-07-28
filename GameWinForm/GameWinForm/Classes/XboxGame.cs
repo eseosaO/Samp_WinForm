@@ -13,7 +13,7 @@ namespace GameWinForm.Classes
         {
             //As this class inherits from a base class, 
             //the constructor will generate the instance based on the attributes of the Base class and an additional attribute considered for this class.
-            this.console = "Xbox console";
+            this.console = "Xbox";
         }
 
         //This method is overridden in this inherited class (XboxGame)
@@ -59,7 +59,7 @@ namespace GameWinForm.Classes
         public override string Description()
         {
             //Extra infomation of the console is added to the description for the game.
-            string description = base.Description() + Environment.NewLine + string.Format("Console: {0}kg", console);
+            string description = base.Description() + Environment.NewLine + string.Format("Console: {0}", console);
             return description;
         }
     }

@@ -57,7 +57,7 @@ namespace GameWinForm.Classes
         public override string Description()
         {
             //Extra infomation of the console is added to the description for the game.
-            string description = base.Description() + Environment.NewLine + string.Format("Console: {0}kg", console);
+            string description = base.Description() + Environment.NewLine + string.Format("Console: {0}", console);
             return description;
         }
     }

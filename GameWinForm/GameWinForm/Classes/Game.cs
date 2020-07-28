@@ -109,7 +109,7 @@ namespace GameWinForm
            Environment.NewLine,
            conditionNameForGame,
            Environment.NewLine,
-           releaseDate,
+           releaseDate.Date.ToString("dd/MM/yyyy"),
            Environment.NewLine,
            CalculateApproximateValue()
             );
