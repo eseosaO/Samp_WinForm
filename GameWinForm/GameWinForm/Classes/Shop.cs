@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
+    [Serializable()] //Serializable implies that this class can be written to disk
     /*The Shop class has a list to store both PS games and Xbox games*/
     public class Shop 
     {
@@ -24,12 +25,14 @@ namespace GameWinForm.Classes
         //Get Methods
         public string GetShopName //This method returns the name of the shop
         {
-            get { return shopName; } 
+            get { return shopName; }
+            set { shopName = value; }
         }
 
         public List<Game> GetGameForSale
         {
             get { return gamesForSale; }
+            set { gamesForSale = value; }
         }
 
         public int CurrentlyViewedGame //this method returns the current index position of the game in the list 
@@ -57,6 +60,12 @@ namespace GameWinForm.Classes
                 description = "No available game in stock";
             }
             return description;
+        }
+        //Method to retrieve current game title.
+        public string CurrentGameName(int index)
+        {
+            string GameTitle = gamesForSale[currentlyViewedGame].GetTitle;
+            return GameTitle;
         }
 
         public bool IsNextGame() //Mehtod to check if there is a next game item in the list
@@ -138,11 +147,33 @@ namespace GameWinForm.Classes
             if(index < gamesForSale.Count)
             {
                 gamesForSale.RemoveAt(index);
+                legaliseCurrentlyViewedGame();
             }
             //To ensure that index position is either 0 or value pointing to an existing position
-            legaliseCurrentlyViewedGame();
+            
         }
 
+        /*Method to sort Games*/
+        public void GameSort()
+        {
+            gamesForSale.Sort(); //List of games sorted in incrementing order
+        }
+
+        /*Method to find a game*/
+        public List<Game> FindGame(string game)
+        {
+            List<Game> Result = new List<Game>(); // A list used to store results from search
+
+            for(int i = 0; i < gamesForSale.Count; i++)
+            {
+                if (GetGameForSale[i].GetTitle.ToLower().Contains(game.ToLower()))
+                {
+                    Result.Add(gamesForSale[i]);
+                }
+            }
+
+            return Result;
+        }
 
 
 

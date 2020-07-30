@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
+    [Serializable()] //Serializable implies that this class can be written to disk
     //XboxGame is inheritted class from base class, Game.
     public class XboxGame : Game
     {

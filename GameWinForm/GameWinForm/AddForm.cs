@@ -39,12 +39,12 @@ namespace GameWinForm
         /*Setup when the form is loaded*/
         private void AddForm_Load(object sender, EventArgs e)
         {
-            
+               
             cmbConsole.Items.Add("Playstation"); //Item 'playstation' is added to dropdown list 
             cmbConsole.Items.Add("Xbox"); //Item 'Xbox' is added to dropdown list 
 
             /*Loop to add each item fro Enum to the dropdown list*/
-            foreach (var item in Enum.GetValues(typeof(Game.Condition)))
+            foreach (var item in Enum.GetValues(typeof(Condition)))
             {
                 cmbCondition.Items.Add(item);
             }
@@ -52,17 +52,21 @@ namespace GameWinForm
 
         
 
+        
         /*Event handler for the addition of a game*/
         private void btnAdd_Click(object sender, EventArgs e)
         {
             title = txtTitle.Text;
             dev = txtDev.Text;
             string cons = Enum.GetName(typeof(Condition), con);
-
             
-            int index1, index2 = 0;
-            index1 = cmbCondition.SelectedIndex;
-            index2 = cmbCondition.SelectedIndex;
+            
+            int index;
+            index = cmbCondition.SelectedIndex;
+            
+
+            con = (Condition)Enum.Parse(typeof(Condition), index.ToString());
+
 
 
             try
@@ -83,7 +87,7 @@ namespace GameWinForm
                 MessageBox.Show("Price must be a decimal number", "Price Format Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
 
-            if(index1 != -1 && index2 != -1)
+            if(index != -1 )
             {
                 if(cmbConsole.Text == "Playstation")
                 {

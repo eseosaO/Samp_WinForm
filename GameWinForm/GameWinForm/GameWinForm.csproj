@@ -55,6 +55,12 @@
     <Compile Include="Classes\PSGame.cs" />
     <Compile Include="Classes\Shop.cs" />
     <Compile Include="Classes\XboxGame.cs" />
+    <Compile Include="formFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFind.Designer.cs">
+      <DependentUpon>formFind.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddForm.resx">
       <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFind.resx">
+      <DependentUpon>formFind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GameForm.resx">
       <DependentUpon>GameForm.cs</DependentUpon>

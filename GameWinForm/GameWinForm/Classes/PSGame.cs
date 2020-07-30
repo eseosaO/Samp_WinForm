@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
+    [Serializable()] //Serializable implies that this class can be written to disk
     /*PSGame is inheritted class from base class, Game.*/
     public class PSGame : Game
     {
+        
         public PSGame(string gameTitle, string gameDev, decimal originalPrice, DateTime releaseDate, Condition condition) : base(gameTitle, gameDev, originalPrice, releaseDate, condition)
         {
             //As this class inherits from a base class, 
