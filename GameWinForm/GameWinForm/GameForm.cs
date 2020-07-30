@@ -99,6 +99,7 @@ namespace GameWinForm
            
         }
 
+        //Event handler for adding a game to the shop list
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             Game game = null; //Declared game instance with no values.
@@ -175,6 +176,7 @@ namespace GameWinForm
             GameSave();
         }
 
+        //Method for saving a game list
         private void GameSave()
         {
             //string saveFile = null;
@@ -203,11 +205,13 @@ namespace GameWinForm
             }
         }
 
+        //Event handler for loading game list
         private void btnLoad_Click(object sender, EventArgs e)
         {
             LoadGameList();
         }
 
+        //Method for loading a Game List
         private void LoadGameList()
         {
             string fileName = null;
