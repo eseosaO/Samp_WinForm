@@ -8,7 +8,8 @@ namespace GameWinForm
 {
     [Serializable()] //Serializable implies that this class can be written to disk
     /*****************************************************************************\
-    |Game is an Abstract class that implements with IComparable interface which   | 
+    | Developed By Dr Eseosa Oshodin                                              |                             |
+    | Game is an Abstract class that implements with IComparable interface which  | 
     |will enable sorting of objects(i.e.Game objects).Using polymorphism, types   |
     |of games, PS games and Xbox games inherit from the Game Abstract class       |
     |This types of games implement a method (declared in the abstract) differently| 

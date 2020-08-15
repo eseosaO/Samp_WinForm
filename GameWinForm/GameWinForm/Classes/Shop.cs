@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace GameWinForm.Classes
 {
-    [Serializable()] //Serializable implies that this class can be written to disk
-    /*The Shop class has a list to store both PS games and Xbox games*/
+    //[Serializable()] //Serializable implies that this class can be written to disk
+    /*****************************************************************************\
+    | Developed By Dr Eseosa Oshodin                                              |
+    |The Shop class has a list to store both PS games and Xbox games              |
+    \*****************************************************************************/
+    
     public class Shop 
     {
         //Attributes
